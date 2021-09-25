@@ -1,0 +1,26 @@
+// C++ code
+//
+
+#include <Servo.h>
+
+Servo servo;
+
+void setup()
+{ 
+  pinMode(8, INPUT_PULLUP);
+  servo.attach(4);
+}
+
+void loop()
+{
+  if(digitalRead(8)==LOW)
+  {
+    servo.write(90);
+    delay(1000);
+  }
+  else
+  {
+    servo.write(0);
+    delay(1000);
+  }
+}
