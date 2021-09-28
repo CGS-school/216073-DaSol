@@ -13,14 +13,14 @@ void setup()
 
 void loop()
 {
-  if(digitalRead(8)==LOW)
+  if(digitalRead(8)==LOW) // 스위치 누름
   {
-    servo.write(90);
+    servo.write(90); // 직각으로 올라감
     delay(1000);
   }
   else
   {
-    servo.write(0);
+    servo.write(0); // 수평으로 내려감
     delay(1000);
   }
 }
