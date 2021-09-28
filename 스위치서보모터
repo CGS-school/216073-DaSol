@@ -7,7 +7,7 @@ Servo servo;
 
 void setup()
 { 
-  pinMode(8, INPUT_PULLUP);
+  pinMode(8, INPUT_PULLUP); // 풀업저항 회로 생략
   servo.attach(4);
 }
 
