@@ -7,13 +7,13 @@ Servo servo;
 
 void setup()
 { 
-  pinMode(8, INPUT_PULLUP); // 풀업저항 회로 생략
+  pinMode(8, INPUT_PULLUP); // 풀업저항(기본 값 반대) 회로 생략
   servo.attach(4);
 }
 
 void loop()
 {
-  if(digitalRead(8)==LOW) // 스위치 누름
+  if(digitalRead(8)==LOW) // 스위치 누름(-> 입력값이 없지만, 입력값이 있는걸로 출력)
   {
     servo.write(90); // 직각으로 올라감
     delay(1000);
